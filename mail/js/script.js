@@ -50,4 +50,31 @@ submitButton.addEventListener('click', function() {
 
     };
 
+    //IF condition: IF "granted access" variable = true write "access granted";
+    if (grantedAccess === true) {
+
+        document.getElementById('check-outcome').innerText = 'Access Granted!';
+        document.getElementById('check-outcome').style.color = 'green';
+
+        //CHECK
+        console.log('user email present in emails list');
+
+    //ELSE write "access denied";
+    } else {
+
+        document.getElementById('check-outcome').innerText = 'Access Denied!';
+        document.getElementById('check-outcome').style.color = 'red';
+
+        //CHECK
+        console.log('user email not present in emails list');
+    };
+
+});
+
+let cancelButton = document.getElementById('cancel-button');
+
+cancelButton.addEventListener('click', function() {
+
+    userEmail.value = '';
+
 });
