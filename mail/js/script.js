@@ -17,10 +17,10 @@ stampa un messaggio appropriato sull’esito del controllo.
 
         then, inside the cycle, create an IF condition:
                 IF user email IN granted emails list, 
-                THEN "granted access" variable == true; 
+                THEN "granted access" variable = true; 
 
     b - create an IF condition:
-        i - IF "granted access" variable == true write "access granted";
+        i - IF "granted access" variable = true write "access granted";
         ii - ELSE write "access denied";
 */
 
@@ -37,5 +37,17 @@ submitButton.addEventListener('click', function() {
     //check
     console.log(userEmail);
     //check
+
+    //FOR cycle
+    for (let i = 0; i < emailsList.length; i++) {
+
+        //IF user email IN granted emails list, THEN "granted access" variable = true; 
+        if (emailsList[i] === userEmail) {
+
+            grantedAccess = true;
+
+        };
+
+    };
 
 });
