@@ -22,3 +22,32 @@ let gameOutcome = document.getElementById('game-outcome');
 console.log('the User rolled the dice, the number that came out is ' + userNumber);
 console.log('the Computer rolled the dice, the number that came out is ' +machineNumber);
 console.log(gameOutcome);
+
+
+//create the IF condition
+if (userNumber > machineNumber) {
+
+    document.getElementById('user-score').innerText = 'You scored ' + userNumber;
+    document.getElementById('machine-score').innerText = 'Computer scored ' + machineNumber;
+    gameOutcome.innerText = 'You win!';
+
+    //CHECK
+    console.log('User wins!');
+
+} else if (userNumber < machineNumber) {
+
+    document.getElementById('user-score').innerText = 'You scored ' + userNumber;
+    document.getElementById('machine-score').innerText = 'Computer scored ' + machineNumber;
+    gameOutcome.innerText = 'Computer wins!';
+    //CHECK
+    console.log('Computer wins!')
+
+} else if (userNumber === machineNumber) {
+
+    document.getElementById('user-score').innerText = 'You scored ' + userNumber;
+    document.getElementById('machine-score').innerText = 'Computer scored ' + machineNumber;
+    gameOutcome.innerText = "It's a tie!";
+    //CHECK
+    console.log("It's a tie!")
+    
+}
