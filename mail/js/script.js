@@ -3,7 +3,6 @@ Chiedi all’utente la sua email,
 controlla che sia nella lista di chi può accedere,
 stampa un messaggio appropriato sull’esito del controllo.
 
-
 1 - create variables:
     a - user email;
     b - submit button;
@@ -18,12 +17,25 @@ stampa un messaggio appropriato sull’esito del controllo.
 
         then, inside the cycle, create an IF condition:
                 IF user email IN granted emails list, 
-                THEN "granted access" variable == true 
+                THEN "granted access" variable == true; 
 
     b - create an IF condition:
         i - IF "granted access" variable == true write "access granted";
-        ii - ELSE write "access denied"
-
-
-
+        ii - ELSE write "access denied";
 */
+
+//create variables
+let userEmailEl = document.getElementById('userEmail');
+let submitButton = document.getElementById('submit-button');
+let emailsList = ['pippo@gmail.com', 'topolino@gmail.com', 'pluto@gmail.com', 'minnie@gmail.com', 'paperino@gmail.com'];
+let grantedAccess = false;
+
+//button click
+submitButton.addEventListener('click', function() {
+
+    let userEmail = userEmailEl.value;
+    //check
+    console.log(userEmail);
+    //check
+
+});
