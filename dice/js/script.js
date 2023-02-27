@@ -12,3 +12,13 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
         b - IF machine random number is bigger than user random number, machine wins;
         c - IF user random number = machine random number, result is a tie.
 */
+
+//create variables
+let userNumber = Math.floor((Math.random() * 6) + 1);
+let machineNumber = Math.floor((Math.random() * 6) + 1);
+let gameOutcome = document.getElementById('game-outcome');
+
+//CHECK
+console.log('the User rolled the dice, the number that came out is ' + userNumber);
+console.log('the Computer rolled the dice, the number that came out is ' +machineNumber);
+console.log(gameOutcome);
