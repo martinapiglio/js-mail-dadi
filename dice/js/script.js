@@ -13,41 +13,47 @@ Stabilire il vincitore, in base a chi fa il punteggio più alto.
         c - IF user random number = machine random number, result is a tie.
 */
 
-//create variables
-let userNumber = Math.floor((Math.random() * 6) + 1);
-let machineNumber = Math.floor((Math.random() * 6) + 1);
+
 let gameOutcome = document.getElementById('game-outcome');
+let playButton = document.getElementById('play-button');
 
-//CHECK
-console.log('the User rolled the dice, the number that came out is ' + userNumber);
-console.log('the Computer rolled the dice, the number that came out is ' +machineNumber);
-console.log(gameOutcome);
+playButton.addEventListener('click', function() {
 
-
-//create the IF condition
-if (userNumber > machineNumber) {
-
-    document.getElementById('user-score').innerText = 'You scored ' + userNumber;
-    document.getElementById('machine-score').innerText = 'Computer scored ' + machineNumber;
-    gameOutcome.innerText = 'You win!';
+    let userNumber = Math.floor((Math.random() * 6) + 1);
+    let machineNumber = Math.floor((Math.random() * 6) + 1);
 
     //CHECK
-    console.log('User wins!');
+    console.log('the User rolled the dice, the number that came out is ' + userNumber);
+    console.log('the Computer rolled the dice, the number that came out is ' +machineNumber);
+    console.log(gameOutcome);
 
-} else if (userNumber < machineNumber) {
+    //create the IF condition
+    if (userNumber > machineNumber) {
 
-    document.getElementById('user-score').innerText = 'You scored ' + userNumber;
-    document.getElementById('machine-score').innerText = 'Computer scored ' + machineNumber;
-    gameOutcome.innerText = 'Computer wins!';
-    //CHECK
-    console.log('Computer wins!')
+        document.getElementById('user-score').innerText = 'You scored ' + userNumber;
+        document.getElementById('machine-score').innerText = 'Computer scored ' + machineNumber;
+        gameOutcome.innerText = 'You win!';
 
-} else if (userNumber === machineNumber) {
+        //CHECK
+        console.log('User wins!');
 
-    document.getElementById('user-score').innerText = 'You scored ' + userNumber;
-    document.getElementById('machine-score').innerText = 'Computer scored ' + machineNumber;
-    gameOutcome.innerText = "It's a tie!";
-    //CHECK
-    console.log("It's a tie!")
-    
-}
+    } else if (userNumber < machineNumber) {
+
+        document.getElementById('user-score').innerText = 'You scored ' + userNumber;
+        document.getElementById('machine-score').innerText = 'Computer scored ' + machineNumber;
+        gameOutcome.innerText = 'Computer wins!';
+        //CHECK
+        console.log('Computer wins!')
+
+    } else if (userNumber === machineNumber) {
+
+        document.getElementById('user-score').innerText = 'You scored ' + userNumber;
+        document.getElementById('machine-score').innerText = 'Computer scored ' + machineNumber;
+        gameOutcome.innerText = "It's a tie!";
+        //CHECK
+        console.log("It's a tie!")
+        
+    }
+
+})
+
